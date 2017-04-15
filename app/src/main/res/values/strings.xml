@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UdaMovies</string>
+    <string name="sort_popular">popular</string>
+    <string name="action_sort">Sort</string>
+    <string name="baseurl" translatable="false">https://api.themoviedb.org/3/movie/</string>
+    <string name="apikey" translatable="false">598665b866adbd6db12ef6673546090f</string>
+    <string name="title_activity_movie_detail">Movie Detail</string>
+    <string name="released_on">Released on</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="adult_content">Adult Content</string>
+    <string name="transition_movies_avatar">transition_movies_avatar</string>
+</resources>
