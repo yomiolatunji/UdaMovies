@@ -127,7 +127,8 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#33ffffff">
 
         <ImageView
             android:id="@android:id/home"
@@ -136,6 +137,5 @@
             android:padding="16dp"
             app:srcCompat="@drawable/ic_arrow_back" />
     </FrameLayout>
-
 </FrameLayout>
 

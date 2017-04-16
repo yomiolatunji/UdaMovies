@@ -53,6 +53,60 @@
             android:scrollbars="vertical"
             app:layoutManager="GridLayoutManager"
             tools:listitem="@layout/item_movie" />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu"
+            android:layout_gravity="bottom|end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            app:menu_fab_size="normal"
+            app:menu_showShadow="true"
+            app:menu_shadowColor="#66000000"
+            app:menu_shadowRadius="4dp"
+            app:menu_shadowXOffset="1dp"
+            app:menu_shadowYOffset="3dp"
+            app:menu_icon="@drawable/ic_sort"
+            app:menu_buttonSpacing="0dp"
+            app:menu_labels_paddingTop="4dp"
+            app:menu_labels_paddingRight="8dp"
+            app:menu_labels_paddingBottom="4dp"
+            app:menu_labels_paddingLeft="8dp"
+            app:fab_colorNormal="@color/colorAccent"
+            app:menu_labels_textColor="#FFFFFF"
+            app:menu_labels_textSize="14sp"
+            app:menu_labels_cornerRadius="3dp"
+            app:menu_labels_colorNormal="#333333"
+            app:menu_labels_colorPressed="#444444"
+            app:menu_labels_colorRipple="#66FFFFFF"
+            app:menu_labels_showShadow="true"
+            app:menu_labels_singleLine="false"
+            app:menu_labels_ellipsize="none"
+            app:menu_labels_maxLines="-1"
+            app:menu_labels_position="left"
+            app:menu_openDirection="up"
+            app:menu_backgroundColor="@android:color/transparent">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/menu_item_popular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_sort"
+                app:fab_size="mini"
+                app:fab_label="@string/by_popularity" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/menu_item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_sort"
+                app:fab_size="mini"
+                app:fab_label="@string/by_rating" />
+
+        </com.github.clans.fab.FloatingActionMenu>
     </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>
