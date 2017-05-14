@@ -1,100 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.yomiolatunji.udamovies.MovieDetailActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
             android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:transitionName="@string/transition_movies_avatar"
-                app:srcCompat="@drawable/ic_local_movies" />
-
-            <TextView
-                android:id="@+id/title"
-                style="@style/Base.TextAppearance.AppCompat.Title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:gravity="center"
-                tools:text="The Boss Baby" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
-
-                <TextView
-                    android:id="@+id/adult_content"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:visibility="invisible"
-                    android:text="@string/adult_content"/>
-
-                <RatingBar
-                    android:id="@+id/user_rating"
-                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:isIndicator="true"
-                    android:max="100"
-                    android:numStars="5"
-                    android:progress="67" />
-
-                <TextView
-                    android:id="@+id/rating_count"
-                    style="@style/Base.TextAppearance.AppCompat.Caption"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="432" />
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_person" />
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="@dimen/image_height"
+                    android:adjustViewBounds="true"
+                    android:transitionName="@string/transition_movies_avatar"
+                    app:srcCompat="@drawable/ic_local_movies" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:id="@+id/release_date"
+                        style="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1974-12-2"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+
+                        <RatingBar
+                            android:id="@+id/user_rating"
+                            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:max="100"
+                            android:numStars="5"
+                            android:progress="67" />
+
+                        <TextView
+                            android:id="@+id/rating_count"
+                            style="@style/Base.TextAppearance.AppCompat.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="432" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_person" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/adult_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adult_content"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/mark_favorite"
+                        style="@style/Base.TextAppearance.AppCompat.Widget.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/space_mini"
+                        android:text="@string/mark_as_favorite" />
+                </LinearLayout>
             </LinearLayout>
-
-            <TextView
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:text="@string/released_on"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/release_date"
-                style="@style/Base.TextAppearance.AppCompat.Body2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="16dp"
-                android:text="1974-12-2"
-                android:textSize="18sp" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+
+                    <TextView
+                        android:id="@+id/synopsis"
+                        style="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="A story about how a new baby's arrival impacts a family, told from the point of view of a delightfully unreliable narrator, a wildly imaginative 7 year old named Tim." />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mid_gray"
+                android:padding="4dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="0dp">
 
@@ -107,35 +154,71 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/synopsis" />
+                        android:text="Trailers:"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#333" />
+                        android:background="@color/mid_gray"
+                        android:padding="4dp" />
 
-                    <TextView
-                        android:id="@+id/synopsis"
-                        style="@style/Base.TextAppearance.AppCompat.Body1"
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/trailer_list"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="A story about how a new baby's arrival impacts a family, told from the point of view of a delightfully unreliable narrator, a wildly imaginative 7 year old named Tim." />
+                        android:clipToPadding="false"
+                        android:scrollbarStyle="outsideOverlay"
+                        android:scrollbars="vertical"
+                        app:layoutManager="LinearLayoutManager"
+                        tools:listitem="@layout/item_trailer" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mid_gray"
+                android:padding="4dp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reviews:"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/mid_gray"
+                        android:padding="4dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/review_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:scrollbarStyle="outsideOverlay"
+                        android:scrollbars="vertical"
+                        app:layoutManager="LinearLayoutManager"
+                        tools:listitem="@layout/item_review" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#33ffffff">
-
-        <ImageView
-            android:id="@android:id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            app:srcCompat="@drawable/ic_arrow_back" />
-    </FrameLayout>
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
 

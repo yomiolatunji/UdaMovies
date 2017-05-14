@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_normal">
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        tools:text="The film starts out on the streets of Cuba with Dom doing some street racing to help out a relative.\r\n\r\nDom (Vin Diesel) is honeymooning in Cuba with Letty but married bliss does not last for long. A cyber terrorist called Cipher (Charlize Theron) has something on Dom, enough to get him to turn his back on his family and go rogue.\r\n\r\nHobbs ends up in jail because of Dom's betrayal. Even worse he is the same block as Deckard Shaw (Jason Statham) the man he put in jail in the last film.\r\n\r\nMr Nobody (Kurt Russell) manipulates both Hobbs and Shaw to team up, together with Dom's crew they go after Cipher.\r\n\r\nThe film has several big action pieces the best of which are auto-driven cars being hacked an causing mayhem in the streets of New York. The Russian set action scenes on ice being a bit dicey.\r\n\r\nIt is still a loud, dumb action picture. Popcorn entertainment." />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mid_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_mini"
+        android:gravity="right|center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_person"/>
+        <TextView
+            android:id="@+id/author"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="DanDare"/>
+    </LinearLayout>
+</LinearLayout>

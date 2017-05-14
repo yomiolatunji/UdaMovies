@@ -1,3 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="space_large">64dp</dimen>
+    <dimen name="space_mini">8dp</dimen>
+    <dimen name="space_micro">4dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+
+    <dimen name="image_height">168dp</dimen>
+    <dimen name="image_width">128dp</dimen>
 </resources>

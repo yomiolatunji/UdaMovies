@@ -1,4 +1,4 @@
-package com.yomiolatunji.udamovies;
+package com.yomiolatunji.udamovies.data.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;

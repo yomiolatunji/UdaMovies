@@ -15,6 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +32,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.yomiolatunji.udamovies.MainActivity" />
         </activity>
+        <provider
+            android:authorities="com.yomiolatunji.udamovies"
+            android:name=".data.MoviesProvider"
+            android:exported="false"/>
     </application>
 
 </manifest>

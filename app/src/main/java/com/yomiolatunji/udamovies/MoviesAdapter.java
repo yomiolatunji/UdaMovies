@@ -10,9 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.yomiolatunji.udamovies.data.entity.Movies;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesHold
         else
             holder.image.setImageResource(R.drawable.ic_local_movies);
         holder.movie = movies;
-        holder.title.setText(movies.getTitle());
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,14 +134,12 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesHold
 
         public Movies movie;
         ImageView image;
-        TextView title;
         View mView;
 
         public MoviesHolder(View itemView) {
             super(itemView);
             mView = itemView;
             image = (ImageView) itemView.findViewById(R.id.image);
-            title = (TextView) itemView.findViewById(R.id.title);
         }
 
     }

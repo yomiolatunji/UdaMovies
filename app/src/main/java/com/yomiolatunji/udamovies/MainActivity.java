@@ -2,8 +2,8 @@ package com.yomiolatunji.udamovies;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
+import com.yomiolatunji.udamovies.data.entity.Movies;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar loadingBar;
     private ImageView noConnectionView;
     private MoviesAdapter adapter;
-    private GridLayoutManager layoutManager;
+    private StaggeredGridLayoutManager layoutManager;
     private FloatingActionMenu menuView;
     private FloatingActionButton menuItemPopular;
     private FloatingActionButton menuItemRating;
@@ -50,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
             noConnectionView.setVisibility(View.VISIBLE);
         }
         moviesRecyclerView.setAdapter(adapter);
-        layoutManager = new GridLayoutManager(this, 2);
+        layoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         moviesRecyclerView.setLayoutManager(layoutManager);
-        moviesRecyclerView.setHasFixedSize(true);
+        //moviesRecyclerView.setHasFixedSize(true);
         menuItemPopular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
