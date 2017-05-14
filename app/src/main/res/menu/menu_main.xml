@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.yomiolatunji.udamovies.MainActivity">
     <item
-        android:id="@+id/action_sort"
+        android:id="@+id/action_favorite"
         android:orderInCategory="12"
-        android:title="@string/action_sort"
+        android:title="@string/favourite"
         app:showAsAction="always" />
 </menu>

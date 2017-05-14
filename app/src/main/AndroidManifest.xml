@@ -32,10 +32,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.yomiolatunji.udamovies.MainActivity" />
         </activity>
+
         <provider
-            android:authorities="com.yomiolatunji.udamovies"
             android:name=".data.MoviesProvider"
-            android:exported="false"/>
+            android:authorities="com.yomiolatunji.udamovies"
+            android:exported="false" />
+
+        <activity
+            android:name=".FavouriteActivity"
+            android:label="@string/title_activity_favourite"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.yomiolatunji.udamovies.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
